@@ -1,0 +1,76 @@
+@import "../../../assets/scss/variable";
+@import "../../../assets/scss/common";
+
+.wrapper {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 1.5rem 1.6rem 3rem;
+   background-color: $light-color;
+   border-radius: 1.6rem;
+   @media screen and (max-width: 666px) {
+      width: calc(100vw - 15vw);
+   }
+   @media screen and (min-width: 667px) {
+      max-width: 96rem;
+      width: 100%;
+      padding: 1.5rem 1.6rem 5rem;
+   }
+}
+.deleteBtn {
+   width: 2.4rem;
+   align-self: flex-end;
+   & > * {
+      display: block;
+   }
+}
+.title {
+   font-family: $family_secondary;
+   font-weight: 700;
+   font-size: 2.4rem;
+   line-height: 2.9rem;
+   margin: 1rem 0 1.6rem;
+   text-align: center;
+   @media screen and (min-width: 667px) {
+      font-size: 3.2rem;
+      line-height: 3.8rem;
+      margin: 1rem 0 3rem;
+   }
+}
+.text {
+   font-size: 1.6rem;
+   line-height: 1.9rem;
+   text-align: center;
+   @media screen and (min-width: 667px) {
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+   }
+}
+.box {
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   max-width: 54rem;
+   width: 100%;
+   margin-top: 3rem;
+   @media screen and (max-width: 666px) {
+      & > button {
+         max-width: 16rem;
+         margin: 0;
+      }
+   }
+   @media screen and (min-width: 667px) {
+      border-top: solid 1px $check-box-switch-off;
+      padding-top: 3rem;
+   }
+   & > * {
+      min-width: 10.8rem;
+      @media screen and (min-width: 667px) {
+         max-width: 26rem;
+      }
+      &:not(:last-child) {
+         margin-right: 1rem;
+      }
+   }
+}

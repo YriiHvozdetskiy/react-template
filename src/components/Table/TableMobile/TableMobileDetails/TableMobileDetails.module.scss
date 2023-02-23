@@ -1,0 +1,141 @@
+@import "../../../../assets/scss/variable";
+@import "../../../../assets/scss/common";
+
+.body {
+   display: block;
+   background-color: $check-box-switch-off;
+   max-height: 60vh;
+   overflow-y: auto;
+}
+.info {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 1.5rem;
+   &:not(:last-child) {
+      border-bottom: solid 1px $light-color;
+   }
+   & > * {
+      &:first-child {
+         font-size: 1.4rem;
+         line-height: 1.6rem;
+         color: $secondary-color;
+      }
+      &:last-child {
+         font-size: 1.4rem;
+         line-height: 1.6rem;
+         color: $primary-color
+      }
+   }
+}
+.questionItem {
+   background-color: $light-color;
+   margin: 1.5rem;
+}
+.quantity {
+   font-size: 1.6rem;
+   line-height: 1.9rem;
+   color: $secondary-color;
+   padding: 1.5rem;
+}
+.description {
+   font-size: 1.4rem;
+   line-height: 1.6rem;
+   padding: 1.5rem;
+   border-bottom: solid 1px $check-box-switch-off;
+}
+.video {
+   font-size: 1.4rem;
+   line-height: 1.6rem;
+   color: $secondary-color;
+   padding: 1.5rem;
+   border-bottom: solid 1px $check-box-switch-off;
+   & svg {
+      display: block;
+   }
+   & path {
+      fill: $accent-color-hover;
+   }
+   & > * {
+      &:first-child {
+         margin-bottom: 1.2rem;
+      }
+   }
+}
+.question {
+   font-size: 1.4rem;
+   line-height: 1.6rem;
+   color: $secondary-color;
+   padding: 1.5rem;
+   border-bottom: solid 1px $check-box-switch-off;
+   & path {
+      fill: $accent-color-hover;
+   }
+   & > * {
+      &:first-child {
+         margin-bottom: 1.2rem;
+      }
+      &:last-child {
+         cursor: pointer;
+      }
+   }
+}
+.answer {
+   & path {
+      fill: $check-box-switch-on;
+   }
+}
+.button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   & svg {
+      display: block;
+      width: 2.4rem;
+      height: 2.4rem;
+   }
+
+   &_question {
+      position: relative;
+   }
+   &_answer {
+      & path {
+         fill: $check-box-switch-on;
+      }
+   }
+   &_pause {
+      & path {
+         &:first-child {
+            fill: #6DD0EF;
+         }
+      }
+   }
+   &_play {
+   }
+}
+.audio {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+}
+.score {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   font-size: 1.4rem;
+   line-height: 1.6rem;
+   color: $secondary-color;
+   padding: 1.5rem;
+   border-bottom: solid 1px $check-box-switch-off;
+}
+.evaluate {
+   font-size: 1.4rem;
+   line-height: 1.6rem;
+   color: $primary-color;
+}
+

@@ -1,0 +1,45 @@
+@import "../../assets/scss/variable";
+@import "../../assets/scss/common";
+
+.wrapper {
+   margin-top: 3rem;
+   @media screen and (min-width: 667px) {
+      margin-top: 5rem;
+   }
+}
+.pagination {
+   display: inline-flex;
+   align-items: center;
+   font-size: 1.4rem;
+   line-height: 1.6rem;
+   border: 1px solid $bg-secondary;
+   & > li {
+      &.disabled {
+         & > * {
+            background-color: #2CA6E7;
+
+         }
+      }
+      & > a {
+         padding: 1.6rem;
+         text-align: center;
+      }
+      &:not(:last-child) {
+         border-right: 1px solid $bg-secondary;
+      }
+   }
+}
+.item {
+
+   &.active {
+      background-color: $accent-color;
+   }
+
+   &.disabled {
+      background-color: #2CA6E7;
+      & > a {
+         color: red;
+      }
+   }
+}
+

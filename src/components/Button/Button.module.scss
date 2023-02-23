@@ -1,0 +1,228 @@
+@import "../../assets/scss/variable";
+@import "../../assets/scss/common";
+
+.button {
+   min-width: 16.4rem;
+   width: 100%;
+   border-radius: 3.2rem;
+   background-color: transparent;
+   padding: 1rem;
+   border: solid 0.1rem $bg-secondary;
+   transition: all .25s $time-distribution-function;
+   @media screen and (min-width: 667px) {
+      min-width: 26rem;
+      padding: 2rem;
+   }
+   & > * {
+      path {
+         transition: all .25s $time-distribution-function;
+      }
+   }
+   &:hover {
+      background-color: $accent-color;
+      border: solid 0.1rem $accent-color;
+      & > * {
+         color: $light-color;
+         path {
+            fill: white;
+         }
+      }
+   }
+   & > * {
+      font-family: $family_secondary;
+      font-weight: 700;
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      transition: color .25s $time-distribution-function;
+      @media screen and (min-width: 667px) {
+         font-size: 1.8rem;
+         line-height: 2.2rem;
+      }
+   }
+
+   &_accent {
+      background-color: $accent-color;
+      border: solid 0.1rem $accent-color;
+      color: $light-color;
+      min-width: 16.4rem;
+      max-width: 16rem;
+      width: 100%;
+      padding: 1rem;
+      border-radius: 3.2rem;
+      transition: all .25s $time-distribution-function;
+      margin: 0 auto;
+      display: block;
+      @media screen and (min-width: 667px) {
+         min-width: 26rem;
+         max-width: 26rem;
+         padding: 2rem;
+      }
+      &:not(:last-child) {
+         margin-bottom: 0.8rem;
+         @media screen and (min-width: 667px) {
+            margin-bottom: 1.8rem;
+         }
+      }
+      &:hover {
+         background-color: $accent-color-hover;
+         border: solid 0.1rem $accent-color-hover;
+      }
+
+      & > * {
+         font-weight: 700;
+         font-size: 1.2rem;
+         line-height: 1.4rem;
+         transition: color .25s $time-distribution-function;
+         color: $light-color;
+         @media screen and (min-width: 667px) {
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+         }
+      }
+   }
+   &_question {
+      max-width: 16rem;
+      width: 100%;
+      margin: 0 auto;
+      border: 2px solid $accent-color;
+      & > * {
+         color: $accent-color;
+         font-weight: 700;
+         font-size: 1.2rem;
+         line-height: 1.4rem;
+         @media screen and (min-width: 667px) {
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+         }
+      }
+      &:hover {
+         border: 2px solid $accent-color;
+      }
+   }
+   &_addTest {
+      display: block;
+      border: 2px solid $accent-color-hover;
+      max-width: 21rem;
+      width: 100%;
+      margin: 0 auto;
+      @media screen and (min-width: 667px) {
+         max-width: 28.5rem;
+         width: 100%;
+      }
+      &:not(:last-child) {
+         margin-bottom: 3rem;
+      }
+      & > * {
+         color: $accent-color-hover;
+      }
+      &:hover {
+         border: 2px solid transparent;
+      }
+   }
+
+   &__logout {
+      min-width: 10rem;
+      width: 100%;
+      padding: 1rem;
+   }
+   &__user {
+      min-width: auto;
+      width: 100%;
+      max-width: 16.4rem;
+      padding: 1.2rem 0;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      font: 700 1.2/120% $family_secondary;
+      margin: 0 auto;
+      @media screen and (min-width: 667px) {
+         padding: 1.5rem 0;
+      }
+      &_pub {
+         color: $primary-color;
+         border: 0.1rem solid $bg-secondary;
+      }
+      &_available {
+         color: $accent-color;
+         border: 0.1em solid $accent-color;
+         &:hover {
+            box-shadow: 0 0 0.5rem $accent-color;
+            border: 0.1rem solid $accent-color;
+         }
+      }
+   }
+   &__start {
+      background-color: $accent-color;
+      color: $bg-primary;
+      width: 11.4rem;
+      min-width: 11.8rem;
+      border: none;
+      @media screen and (min-width: 667px) {
+         width: 25.2rem;
+      }
+   }
+   &__backTests {
+      height: 3.6rem;
+      min-width: auto;
+      width: 100%;
+      max-width: 11.6rem;
+      padding: 1.2rem 0;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font: 700 1.2rem/120% $family_secondary;
+      @media screen and (min-width: 667px) {
+         padding: 2.4rem 0;
+         font: 700 2.8rem/120% $family_secondary;
+      }
+   }
+   &__nextQuestion {
+      min-width: auto;
+      width: 100%;
+      max-width: 11.6rem;
+      padding: 1.2rem 0;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1.5rem auto;
+      & > * {
+         font-family: $family_secondary;
+         font-weight: 700;
+         font-size: 1.8rem;
+         line-height: 2.2rem;
+         @media screen and (min-width: 667px) {
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+         }
+      }
+   }
+   &__seniorDashboard {
+      min-width: 10.4rem;
+      max-width: 11.6rem;
+      padding: 0.6rem 0;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem;
+      & > * {
+         font-family: $family_primary;
+         font-weight: 400;
+         font-size: 1.4rem;
+         line-height: 1.6rem;
+         @media screen and (min-width: 667px) {
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+         }
+      }
+   }
+}
+
+.image {
+   margin-right: 0.9rem;
+   display: flex;
+   align-self: center;
+}
+

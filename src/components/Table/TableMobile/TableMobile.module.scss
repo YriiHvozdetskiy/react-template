@@ -1,0 +1,24 @@
+@import "../../../assets/scss/variable";
+@import "../../../assets/scss/common";
+
+.header {
+   display: flex;
+   align-items: center;
+   padding: 2rem 0;
+   border-top: $check-box-switch-off solid 1px;
+   & > * {
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      color: $secondary-color;
+   }
+}
+.id {
+   margin-right: 5rem;
+}
+.list {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border-top: $check-box-switch-off solid 1px;
+}
+

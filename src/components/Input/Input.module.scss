@@ -1,0 +1,45 @@
+@import "../../assets/scss/variable";
+@import "../../assets/scss/common";
+
+.input {
+   padding: 1.6rem;
+   font-size: 1.6rem;
+   line-height: 1.9rem;
+   background: $light-color;
+   border: 1px solid $bg-secondary;
+   border-radius: 0.5rem;
+   margin-top: 1.2rem;
+   &:focus {
+      border: 1px solid transparent;
+   }
+   &::placeholder {
+      color: $secondary-color;
+   }
+   &:disabled {
+      background: $bg-primary;
+   }
+
+   &_description {
+      height: 10rem;
+      resize: none;
+      @media screen and (min-width: 667px) {
+         height: 22rem;
+      }
+   }
+   &_video {
+      max-width: 67rem;
+      width: 100%;
+      background-color: #FDFDFD;
+   }
+   &_commitText {
+      resize: none;
+      width: 100%;
+      @media screen and (min-width: 667px) {
+         height: 15rem;
+      }
+   }
+   &_commitVideo {
+      max-width: 67rem;
+      width: 100%;
+   }
+}

@@ -1,0 +1,249 @@
+:root {
+   --fontFamilyPrimary: Roboto, sans-serif;
+   --fontFamilySecondary: Evolventa, sans-serif;
+   --colorPrimaty: #000;
+}
+#root {
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
+}
+
+html {
+   font-size: 10px;
+}
+@media screen and (min-width: 667px) {
+   html {
+      font-size: 5.3px;
+   }
+}
+@media screen and (min-width: 768px) {
+   html {
+      font-size: 7.1px;
+   }
+}
+@media screen and (min-width: 1024px) {
+   html {
+      font-size: 8.9px;
+   }
+}
+@media screen and (min-width: 1366px) {
+   html {
+      font-size: 9.5px;
+   }
+}
+@media screen and (min-width: 1440px) {
+   html {
+      font-size: 10px;
+   }
+}
+@media screen and (min-width: 1680px) {
+   html {
+      font-size: 11.7px;
+   }
+}
+@media screen and (min-width: 1920px) {
+   html {
+      font-size: 13.3px;
+   }
+}
+
+@media screen and (min-width: 2560px) {
+   html {
+      font-size: 17.8px;
+   }
+}
+
+
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+}
+
+*,
+*:before,
+*:after {
+   box-sizing: border-box;
+}
+
+:focus,
+:active {
+   /*outline: none;*/
+}
+
+a:focus,
+a:active {
+   /*outline: none;*/
+}
+
+html,
+body {
+   height: 100%;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   color: var(--colorPrimaty);
+   font-family: var(--fontFamilyPrimary);
+   /*text-rendering: optimizeLegibility;*/
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea,
+optgroup,
+select {
+   font-family: var(--fontFamilyRoboto);
+   font-size: inherit;
+}
+
+button {
+   cursor: pointer;
+   color: inherit;
+   background-color: inherit;
+   /*прибрати синє миготіння в хромі при кліку*/
+   -webkit-tap-highlight-color: transparent;
+}
+
+button:disabled {
+   cursor: auto;
+}
+
+picture {
+   display: block;
+}
+
+p {
+   margin: 0;
+   padding: 0;
+}
+
+a {
+   cursor: pointer;
+   display: inline-block;
+   color: inherit;
+   /*прибрати синє миготіння в хромі при кліку*/
+   -webkit-tap-highlight-color: transparent;
+}
+
+a:link,
+a:visited {
+   text-decoration: none;
+}
+
+a:hover {
+   text-decoration: none;
+}
+
+ol,
+ul,
+li {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+img {
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   /*vertical-align: top;*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-weight: inherit;
+   font-size: inherit;
+   padding: 0;
+   margin: 0;
+}
+
+blockquote {
+   margin: 0;
+   padding: 0;
+}
+
+/*прибрати стрілки для input type="number"*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+   -moz-appearance: textfield;
+}
+.recording.audio-recorder {
+   width: 500px;
+   color: red
+}
+
+.audio-recorder .audio-recorder-status {
+   display: none;
+}
+
+.audio-recorder .audio-recorder-timer {
+   margin: 0;
+}
+
+.audio-recorder [data-testid='ar_pause'] {
+   display: none;
+}
+
+.audio-recorder [data-testid='ar_cancel'] {
+   width: 5rem;
+   height: 4.4rem;
+   margin: 0;
+}
+
+.audio-recorder {
+   position: relative;
+}
+
+.audio-recorder [title='Save recording'] {
+   display: none;
+}
+
+.react-player {
+   margin: 0 auto;
+   width: 27rem !important;
+   height: 15rem !important;
+   @media screen and (min-width: 667px) {
+      width: 42rem !important;
+      height: 42rem !important;
+   }
+}
+.react-player__play-icon {
+   position: relative;
+   border: none !important;
+   width: 4rem;
+   height: 4rem;
+   margin-left: 0 !important;
+   border-color: transparent !important;
+}
+.react-player__play-icon:after {
+   content: '';
+   position: absolute;
+   width: 40rem;
+   height: 40rem;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-size: 4rem 4rem;
+   background-repeat: no-repeat;
+   z-index: 4;
+}

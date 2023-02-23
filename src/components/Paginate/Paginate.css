@@ -1,0 +1,21 @@
+.page-item {
+   transition: color .25s cubic-bezier(0.4, 0, 0.2, 1),
+   background-color .25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-item > a {
+   display: block;
+}
+
+.page-item.disabled {
+   opacity: 0.5;
+}
+
+.page-item:hover {
+   background-color: #EAEAEA;
+}
+
+.page-item.active {
+   background-color: #41BDFF;
+   color: #fff;
+}

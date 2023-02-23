@@ -1,0 +1,50 @@
+@import "../../../assets/scss/variable";
+@import "../../../assets/scss/common";
+
+.header {
+   display: flex;
+   align-items: center;
+   background-color: $check-box-switch-off;
+   border: 1px solid $bg-secondary;
+   height: 4.8rem;
+   & span {
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      text-align: center;
+      color: $secondary-color;
+   }
+   & > * {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      &:not(:last-child) {
+         border-right: 1px solid $bg-secondary;
+
+      }
+   }
+
+   & > button {
+   }
+}
+.position {
+   flex: 0 1 5%;
+}
+.icon {
+   cursor: auto;
+   &_sort {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+      cursor: pointer;
+      & > svg {
+         width: 1.2rem;
+         height: 1.6rem;
+      }
+   }
+}
+.list {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}

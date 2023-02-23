@@ -1,0 +1,64 @@
+@import "../../../../assets/scss/variable";
+@import "../../../../assets/scss/common";
+
+.row {
+   display: flex;
+   min-height: 4.8rem;
+   &:not(:last-child) {
+      border-bottom: solid 1px $bg-secondary;
+   }
+   & span {
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+   }
+   & > * {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:not(:last-child) {
+         border-right: 1px solid $bg-secondary;
+      }
+   }
+}
+.description {
+   padding: 1rem 1.5rem;
+   justify-content: flex-start;
+}
+.button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   & svg {
+      display: block;
+      width: 2.4rem;
+      height: 2.4rem;
+   }
+
+   &_question {
+      position: relative;
+   }
+   &_answer {
+      & path {
+         fill: $check-box-switch-on;
+      }
+   }
+   &_pause {
+      & path {
+         &:first-child {
+            fill: #6DD0EF;
+         }
+      }
+   }
+   &_play {
+   }
+}
+.audio {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+}

@@ -1,0 +1,151 @@
+@import "../../../../assets/scss/variable";
+@import "../../../../assets/scss/common";
+
+
+.item {
+   display: flex;
+   flex-direction: column;
+   border-bottom: solid 1px $bg-secondary;
+   border-right: solid 1px $bg-secondary;
+   border-left: solid 1px $bg-secondary;
+   width: 100%;
+}
+.wrapper {
+   display: flex;
+   min-height: 4.8rem;
+   transition: background-color .25s $time-distribution-function;
+   cursor: pointer;
+   &:hover {
+      background-color: #F1F1F1;
+   }
+   &.open {
+      background-color: $accent-color-hover;
+      &:hover {
+         background-color: $accent-color-hover;
+
+      }
+      & span {
+         color: $light-color;
+      }
+   }
+   & > * {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:not(:last-child) {
+         border-right: 1px solid $bg-secondary;
+      }
+   }
+   & span {
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      text-align: center;
+   }
+   & .name {
+      text-align: left;
+   }
+
+}
+.position {
+   flex: 0 1 5%;
+   text-align: center;
+}
+.photo {
+   & > * {
+      width: 3.2rem;
+      height: 3.2rem;
+      border-radius: 50%;
+   }
+}
+.name {
+   padding: 1rem 1.5rem;
+   justify-content: flex-start;
+}
+.date {
+   padding: 1rem;
+}
+.group {
+   padding: 1rem;
+}
+.actions {
+   display: flex;
+   justify-content: space-evenly;
+}
+.icon {
+   width: 4rem;
+   height: 4rem;
+   background-color: $light-color;
+   border-radius: 15%;
+   &_button {
+      & path {
+         transition: fill .25s $time-distribution-function;
+      }
+      &:hover {
+         & path {
+            fill: $accent-color-hover;
+         }
+      }
+   }
+   & svg {
+      display: block;
+      width: 4rem;
+      height: 4rem;
+   }
+   & > a > svg {
+      pointer-events: none;
+   }
+}
+.button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   & svg {
+      display: block;
+      width: 2.4rem;
+      height: 2.4rem;
+   }
+
+   &_question {
+      position: relative;
+   }
+   &_answer {
+      & path {
+         fill: $check-box-switch-on;
+      }
+   }
+   &_pause {
+      & path {
+         &:first-child {
+            fill: #6DD0EF;
+         }
+      }
+   }
+   &_play {
+   }
+}
+.audio {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+}
+.score {
+   & > button {
+      padding: 0.6rem 1rem;
+      min-width: auto;
+      width: auto;
+   }
+}
+.seniorActions {
+   display: flex;
+   justify-content: space-between;
+}
+.changeRating {
+   font-size: 1rem;
+   line-height: 1.2rem;
+   color: $accent-color;
+}

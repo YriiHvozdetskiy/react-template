@@ -1,0 +1,27 @@
+@import "../../../../../assets/scss/variable";
+@import "../../../../../assets/scss/common";
+
+.wrapper {
+   padding: 1.5rem;
+   background-color: $check-box-switch-off;
+}
+.body {
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   padding: 3rem;
+   background-color: $light-color;
+   & > button {
+      padding: 0.6rem 1rem;
+      min-width: auto;
+      max-width: none;
+      width: auto;
+      margin: 0;
+   }
+}
+.text {
+   font-family: $family_secondary;
+   font-weight: 700;
+   font-size: 1.8rem;
+   line-height: 2.2rem;
+}

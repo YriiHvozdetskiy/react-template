@@ -1,0 +1,15 @@
+@import "../../assets/scss/variable";
+@import "../../assets/scss/common";
+
+.title {
+   font-size: 5rem;
+   color: $primary-color;
+   font-weight: 700;
+   font-family: $family_secondary;
+   transition: color .25s $time-distribution-function;
+
+   &:hover {
+      color: $secondary-color;
+   }
+}
+

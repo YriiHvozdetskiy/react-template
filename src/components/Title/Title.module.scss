@@ -1,0 +1,19 @@
+@import "../../assets/scss/variable";
+@import "../../assets/scss/common";
+
+.title {
+   font-family: $family_secondary;
+   font-weight: 700;
+   font-size: 2.4rem;
+   line-height: 2.9rem;
+   @media screen and (min-width: 667px) {
+      font-size: 4.8rem;
+      line-height: 5.8rem;
+   }
+   //&:not(:last-child) {
+   //   margin-bottom: 3rem;
+   //   @media screen and (min-width: 667px) {
+   //      margin-bottom: 5rem;
+   //   }
+   //}
+}

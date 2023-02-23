@@ -1,0 +1,20 @@
+@import "../../assets/scss/variable";
+@import "../../assets/scss/common";
+
+.wrapper {
+   padding: 6rem 0;
+}
+.box {
+   display: flex;
+   justify-content: space-between;
+   &:not(:last-child) {
+      margin-bottom: 3rem;
+   }
+   & > button {
+      width: auto;
+      margin-left: 2rem;
+   }
+}
+.submit {
+   margin-top: 5rem;
+}

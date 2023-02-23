@@ -1,0 +1,11 @@
+export const Sort = () => {
+
+   return (
+      <>
+         <svg width="12" height="16" viewBox="0 0 4 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 0L3.73205 3H0.267949L2 0Z" fill="#797979"/>
+            <path d="M2 9L0.267949 6L3.73205 6L2 9Z" fill="#797979"/>
+         </svg>
+      </>
+   );
+};

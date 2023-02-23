@@ -1,0 +1,51 @@
+@import "../../assets/scss/variable";
+@import "../../assets/scss/common";
+
+
+.header {
+   display: flex;
+   @media screen and (max-width: 666px) {
+      position: relative;
+   }
+   &_loggedIn {
+      @media screen and (max-width: 666px) {
+         justify-content: space-between;
+         padding: 1.5rem 0;
+         border-bottom: $check-box-switch-off solid 1px;
+      }
+      @media screen and (min-width: 667px) {
+         flex-direction: column;
+         flex: 0 1 20%;
+         padding: 2rem 1.5rem 1.5rem 3rem;
+      }
+      & > a {
+         @media screen and (min-width: 667px) {
+            align-self: flex-start;
+            margin-bottom: 8rem;
+         }
+      }
+   }
+   &_notLoggedIn {
+      align-items: center;
+      border-bottom: $check-box-switch-off solid 1px;
+      @media screen and (max-width: 666px) {
+         justify-content: space-between;
+         padding: 1.5rem;
+      }
+      @media screen and (min-width: 667px) {
+         padding: 2rem 4rem;
+      }
+   }
+   & > button {
+      display: block;
+      z-index: 2;
+      @media screen and (min-width: 667px) {
+         display: none;
+      }
+      & > svg {
+         display: block;
+      }
+   }
+}
+
+

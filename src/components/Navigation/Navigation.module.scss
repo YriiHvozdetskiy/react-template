@@ -1,0 +1,159 @@
+@import "../../assets/scss/variable";
+@import "../../assets/scss/common";
+
+.wrapper {
+   display: flex;
+   @media screen and (max-width: 666px) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: $light-color;
+      overflow-y: auto;
+      width: 100%;
+      height: 100%;
+      padding: 7rem 1.5rem 0;
+      z-index: 2;
+   }
+   &_loggedIn {
+      flex-direction: column;
+      @media screen and (max-width: 666px) {
+      }
+   }
+   &_notLoggedIn {
+      @media screen and (max-width: 666px) {
+         flex-direction: column;
+      }
+      @media screen and (min-width: 667px) {
+         width: 100%;
+         justify-content: space-between;
+      }
+   }
+   & > button {
+      max-width: 15rem;
+      min-width: 15rem;
+      margin: 0;
+      @media screen and (max-width: 666px) {
+         margin-top: 4rem;
+      }
+   }
+}
+.nav {
+   display: flex;
+   & > * {
+      display: flex;
+   }
+   &_loggedIn {
+      & > * {
+         flex-direction: column;
+      }
+      & > ul > li {
+         &:not(:last-child) {
+            margin-bottom: 4rem;
+         }
+      }
+      & > ul > li > a {
+         display: flex;
+         align-items: center;
+      }
+      & > ul > li > a > svg {
+         width: 2.4rem;
+         height: 2.4rem;
+         margin-right: 1.6rem;
+         flex-shrink: 0;
+      }
+   }
+   &_notLoggedIn {
+      align-items: center;
+      width: 100%;
+      @media screen and (min-width: 667px) {
+         justify-content: center;
+      }
+      & > * {
+         @media screen and (max-width: 666px) {
+            flex-direction: column;
+         }
+         @media screen and (min-width: 667px) {
+            align-items: center;
+         }
+      }
+      & li {
+         &:not(:last-child) {
+            margin: 0 0 2rem 0;
+            @media screen and (min-width: 667px) {
+               margin: 0 4.8rem 0 0;
+            }
+         }
+      }
+   }
+   & a {
+      font-family: $family_secondary;
+      font-weight: 700;
+      font-size: 2.4rem;
+      line-height: 2.9rem;
+      @media screen and (min-width: 667px) {
+         font-size: 1.8rem;
+         line-height: 2.2rem;
+      }
+   }
+}
+.singIn {
+   width: 100%;
+   border-radius: 3.2rem;
+   padding: 1rem;
+   transition: all .25s $time-distribution-function;
+   text-align: center;
+   background-color: $accent-color;
+   max-width: 16rem;
+   margin: 0 auto;
+   @media screen and (min-width: 667px) {
+      padding: 2rem;
+   }
+   &:not(:last-child) {
+      margin-bottom: 0.8rem;
+      @media screen and (min-width: 667px) {
+         margin-bottom: 1.8rem;
+      }
+   }
+   &:hover {
+      background-color: $accent-color-hover;
+   }
+
+   & > * {
+      font-weight: 700;
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      transition: color .25s $time-distribution-function;
+      color: $light-color;
+      @media screen and (min-width: 667px) {
+         font-size: 1.8rem;
+         line-height: 2.2rem;
+      }
+   }
+}
+.active {
+   color: $accent-color;
+   &_loggedIn {
+      @media screen and (min-width: 667px) {
+         position: relative;
+         &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -4.5rem;
+            width: 0.3rem;
+            height: 100%;
+            background: $accent-color;
+         }
+      }
+      & > svg > path {
+         fill: $accent-color;
+      }
+   }
+
+}
+.inactive {
+   color: $primary-color;
+   &_loggedIn {
+
+   }
+}
