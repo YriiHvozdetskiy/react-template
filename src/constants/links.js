@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://salesimulator.denysdanov.cloud/';
+export const BASE_URL = process.env.REACT_APP_URL;
 export const SORT_TESTS = (flag, page) => `${BASE_URL}tests/${flag ? `?ordering=${flag}&page=${page}` : ''}`;
 export const UPDATE_QUESTIONS = (id) => `${BASE_URL}tests/question/${id}/`;
 export const REGISTER = `${BASE_URL}auth/register/`;
